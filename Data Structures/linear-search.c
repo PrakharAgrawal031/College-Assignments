@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
+    // Time Complexity = O(n)
     int n, count = 0, num;
     printf("Enter the size of the array: ");
     scanf("%d", &n);
