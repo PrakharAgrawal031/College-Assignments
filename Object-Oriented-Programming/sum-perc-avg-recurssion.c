@@ -35,6 +35,7 @@ int calcmarks(int arr[])
 int main(int argc, char const *argv[])
 {
     int arr[5];
+    printf("Enter the marks: ");
     for (int i = 0; i < 5; i++)
     {
         scanf("%d", &arr[i]);
