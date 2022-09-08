@@ -1,46 +1,36 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<math.h>
 using namespace std;
-int checkprime(int a);
-int squareroot(int sum);
-int add(int a, int b);
-int product(int a, int b);
+void sine(int a);
+void cosine(int a);
+void squareroot(int a);
+void square(int a );
+
 int main()
 {
-    int a , b, sum;
-    cout<<"Enter the numbers";
-    cin>>a>>b;
-    sum = add(a,b);
-    checkprime(sum);
-    product(a,b);
-    squareroot(sum);
-    
-    bool prime;
-    prime = checkprime(sum);
-    if(prime==true) cout<<sum<< " is prime";
-    else cout<< sum << " is not prime";
+    int a;
+    cout<<"Enter the numbers: "<<endl;
+    cin>>a;
+    cosine(a);
+    sine(a);
+    squareroot(a);
+    square(a);
 }
-int product(int a, int b)
+void sine(int a)
 {
-    cout<<"\nProduct = "<<a*b<<endl;
+    cout<<"Sine("<<a<<") = "<<sin(a)<<endl;
 }
-int add(int a, int b)
+void cosine(int a)
 {
-    return a+b;
+    cout<<"Cos("<<a<<") = "<<cos(a)<<endl;
 }
-int squareroot(int sum)
+void squareroot(int a)
 {
-    cout<<"Square root = "<<sqrt(sum)<<endl;
+    cout<<"Square root of "<<a<<"="<<sqrt(a)<<endl;
 }
-int checkprime(int a)
+
+void square(int a)
 {
-    bool prime = false;
-    for(int i = 2 ; i<a; i++)
-    {
-        if(a%i == 0)
-        {
-            return prime;
-        }
-    }
-    prime = true;
-    return prime;
+    cout<<"Square of "<<a<<" = "<<pow(a,2);
 }
+
