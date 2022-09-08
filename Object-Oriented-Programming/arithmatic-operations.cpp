@@ -9,7 +9,7 @@ void square(int a );
 int main()
 {
     int a;
-    cout<<"Enter the numbers: "<<endl;
+    cout<<"Enter the number: "<<endl;
     cin>>a;
     cosine(a);
     sine(a);
