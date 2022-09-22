@@ -162,7 +162,7 @@ int main()
             while (temp != NULL)
             {
                 if (temp->value == searchval)
-                    return temp;
+                    break;
                 temp = temp->next;
             }
             temp1 = temp;
@@ -194,7 +194,7 @@ int main()
             while (temp != NULL)
             {
                 if (temp->value == searchval)
-                    return temp;
+                    break;
                 temp = temp->next;
             }
             temp1 = temp;
