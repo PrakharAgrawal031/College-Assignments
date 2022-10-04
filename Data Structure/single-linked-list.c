@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<stdbool.h>
 
 struct node
 {
@@ -11,9 +12,8 @@ typedef struct node node_type;
 int main()
 {
     node_type *head, *temp, *result, *p_temp, *current, *previous;
-    int num, position, nodevalue, searchval, choice1, choice2;
-
-    // creating initial linked list
+    int num, position, nodevalue, searchval, choice1, choice2, quit;
+    bool loop=true;
     printf("Enter the number of nodes: ");
     scanf("%d", &num);
     printf("Enter the value of node 1:");
@@ -46,7 +46,9 @@ int main()
         printf("%d  ", p_temp->value);
         p_temp = p_temp->next;
     }
+
     printf("\n");
+    repeater:
     printf("Select the operation to perform: \n");
     printf(" - To insert a new element in list press 1\n");
     printf(" - To delete an existing element in list press 2\n");
@@ -78,6 +80,9 @@ int main()
                 p_temp = p_temp->next;
             }
             printf("\n");
+            printf("\n\nTo continue press 1\nTo quit press 2\n");
+            scanf("%d", &quit);
+            if(quit==1) goto repeater;
             return 0;
         }
         else if (choice2 == 2)
@@ -102,6 +107,9 @@ int main()
                 p_temp = p_temp->next;
             }
             printf("\n");
+            printf("\n\nTo continue press 1\nTo quit press 2\n");
+            scanf("%d", &quit);
+            if(quit==1) goto repeater;
             return 0;
         }
         else if (choice2 == 3)
@@ -129,16 +137,20 @@ int main()
                 p_temp = p_temp->next;
             }
             printf("\n");
+            printf("\n\nTo continue press 1\nTo quit press 2\n");
+            scanf("%d", &quit);
+            if(quit==1) goto repeater;
             return 0;
         }
-        else
-            printf("Invalid input");
+        else {printf("Invalid input");}
+        printf("\n\nTo continue press 1\nTo quit press 2\n");
+        scanf("%d", &quit);
+        if(quit==1) goto repeater;
         break;
 
     case 2:
         printf("Enter the position of element you wish to delete:\n ");
         scanf("%d", &position);
-        // delete_val(&head, position);
         current = head;
         previous = head;
         if (position == 1)
@@ -164,6 +176,9 @@ int main()
             p_temp = p_temp->next;
         }
         printf("\n");
+        printf("\n\nTo continue press 1\nTo quit press 2\n");
+        scanf("%d", &quit);
+        if(quit==1) goto repeater;
         break;
 
     case 3:
@@ -180,10 +195,16 @@ int main()
         if (temp != NULL)
             printf("\nFound %d at %p\n", temp->value, temp);
         else
-            printf("Value not found\n");
+            {printf("Value not found\n");}
+        printf("\n\nTo continue press 1\nTo quit press 2\n");
+        scanf("%d", &quit);
+        if(quit==1) goto repeater;
         break;
     default:
         printf("Invalid Input");
+        printf("\n\nTo continue press 1\nTo quit press 2\n");
+        scanf("%d", &quit);
+        if(quit==1) goto repeater;
         break;
     }
 }
