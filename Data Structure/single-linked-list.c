@@ -13,7 +13,6 @@ int main()
 {
     node_type *head, *temp, *result, *p_temp, *current, *previous;
     int num, position, nodevalue, searchval, choice1, choice2, quit;
-    bool loop=true;
     printf("Enter the number of nodes: ");
     scanf("%d", &num);
     printf("Enter the value of node 1:");
