@@ -72,6 +72,7 @@ int main()
                 printf("%d  ", p_temp->value);
                 p_temp = p_temp->next;
             }
+            num++;
             printf("\n");
             printf("\n\nTo continue press 1\nTo quit press 2\n");
             scanf("%d", &quit);
@@ -99,6 +100,7 @@ int main()
                 printf("%d  ", p_temp->value);
                 p_temp = p_temp->next;
             }
+            num++;
             printf("\n");
             printf("\n\nTo continue press 1\nTo quit press 2\n");
             scanf("%d", &quit);
@@ -129,6 +131,7 @@ int main()
                 printf("%d  ", p_temp->value);
                 p_temp = p_temp->next;
             }
+            num++;
             printf("\n");
             printf("\n\nTo continue press 1\nTo quit press 2\n");
             scanf("%d", &quit);
@@ -168,6 +171,7 @@ int main()
             printf("%d  ", p_temp->value);
             p_temp = p_temp->next;
         }
+        num--;
         printf("\n");
         printf("\n\nTo continue press 1\nTo quit press 2\n");
         scanf("%d", &quit);
