@@ -21,6 +21,7 @@ int main()
     result->value = nodevalue;
     result->next = head;
     head = result;
+    temp = head;
     for (int i = 1; i < num; i++)
     {
         printf("Enter the value of node %d:", i + 1);
@@ -28,15 +29,8 @@ int main()
         result = malloc(sizeof(node_type));
         result->value = nodevalue;
         result->next = NULL;
-        temp = head;
-        for (int j = 0; j < i; j++)
-        {
-            if (j == i - 1)
-                break;
-            temp = temp->next;
-        }
-
-        temp->next = result;
+        temp->next= result;
+        temp= temp->next;
     }
 
     p_temp = head;
