@@ -11,7 +11,7 @@ typedef struct node node_type;
 
 int main()
 {
-    node_type *head, *temp, *result, *p_temp, *current, *temp_search1, *temp_search2;
+    node_type *head, *temp, *result, *p_temp, *current, *temp_search1;
     int num, position, nodevalue, searchval, choice1, choice2, quit;
 
     // creating initial linked list
@@ -131,7 +131,6 @@ repeater:
             temp_search1 = head;
             while (temp_search1 != NULL)
             {
-                temp_search2 = temp_search1->next;
                 if (temp_search1->value == searchval)
                 {
                     break;
@@ -143,7 +142,7 @@ repeater:
             scanf("%d", &nodevalue);
             node_type *spec_temp = malloc(sizeof(node_type));
             spec_temp->value = nodevalue;
-            temp_search2->prev = spec_temp;
+            temp_search1->next->prev = spec_temp;
             spec_temp->next = temp_search1->next;
             spec_temp->prev = temp_search1;
             temp_search1->next = spec_temp;
