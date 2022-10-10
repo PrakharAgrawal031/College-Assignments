@@ -1,41 +1,37 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Test
 {
 	int a, b;
-	public:
-	
-		Test()
-		{
-			cout << "Constructor is called" <<
-					endl;
-			a = 1;
-			b = 2;
-		};
-	
-		~Test()
-		{
-			cout << "Destructor is called" <<
-					endl;
-		}
-	
-		void show()
-		{
-			cout << "a = " <<
-					a << endl;
-			cout << "b = " <<
-					b << endl;
-		}
+
+public:
+	Test()
+	{
+		cout << "Constructor is called" << endl;
+		a = 1;
+		b = 2;
+	};
+
+	~Test()
+	{
+		cout << "Destructor is called" << endl;
+	}
+
+	void show()
+	{
+		cout << "a = " << a << endl;
+		cout << "b = " << b << endl;
+	}
 };
 
 int main()
 {
-	Test *ptr;	
+	Test *ptr;
 	ptr = new Test;
 
-	ptr->show();	
+	ptr->show();
 
-	delete ptr;	
+	delete ptr;
 	return 0;
 }

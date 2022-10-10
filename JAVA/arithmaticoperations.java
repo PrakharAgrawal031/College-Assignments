@@ -1,29 +1,33 @@
-import java.util.Scanner;
 
-public class Main {
+public class arithmaticoperations {
 
-   public static void main(String[] args) {
-        
+    int addition(int x, int y) {
+        return x + y;
+    }
 
-        Scanner scan = new Scanner(System.in);
+    int product(int x, int y) {
+        return x * y;
+    }
 
- 
-        System.out.println("Enter first number :");
-        float num1 = scan.nextFloat();
-        System.out.println("Enter second number :");
-        float num2 = scan.nextFloat();
-        
-        scan.close();
+    float quotient(float x, float y) {
+        return x / y;
+    }
 
-  
-        float addition 		= num1 + num2;
-        float subtraction 	= num1 - num2;
-        float product 	= num1 * num2;
-        float quotient	= num1 / num2;
-        float reminder	    = num1 % num2;
-        
+    int reminder(int x, int y) {
+        return x % y;
+    }
 
-        System.out.printf("Addition: %f, Subtraction: %f, Product: %f, Quotient: %f, Reminder: %f", addition, subtraction, product, quotient, reminder);
-        
+    int sub(int x, int y) {
+        return x - y;
+    }
+
+    public static void main(String[] args) {
+
+        arithmaticoperations operation = new arithmaticoperations();
+
+        System.out.printf("Addition = %d, Subtraction = %d, Product = %d, Quotient = %f, reminder = %d",
+                operation.addition(10, 10), operation.sub(10, 10), operation.product(10, 10),
+                operation.quotient(10, 10), operation.reminder(10, 10));
+
     }
 }

@@ -4,34 +4,32 @@ using namespace std;
 int counter = 0;
 class maths
 {
-    public:
+public:
     maths()
     {
         counter++;
-        cout<<"A new object of this class has been created"<<endl;
-        cout<<"counter value updated to "<<counter<<endl;
+        cout << "object created" << endl;
+        cout << "counter = " << counter << endl;
     }
     ~maths()
     {
-        cout<<"an oject of this class has been destroyed\n updated the value of counter"<<endl;
+        cout << "oject destroyed" << endl;
         counter--;
-        cout<<"counter = "<<counter<<endl;
-        
+        cout << "counter = " << counter << endl;
     }
-    
 };
 
 int main()
 {
     maths M1;
     maths M2;
-    
-    for(int i = 0; i<2; i++)
+
+    for (int i = 0; i <1; i++)
     {
-        cout<<"inside a loop\n";
-        maths M3;   
+        cout << "inside a loop\n";
+        maths M3;
     }
-    cout<<"loop ended\n";
+    cout << "loop ended\n";
 
     return 0;
 }
