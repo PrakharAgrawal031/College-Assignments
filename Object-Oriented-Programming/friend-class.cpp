@@ -3,8 +3,8 @@
 using namespace std;
 
 class Box
-{ public:
-    double length, width, height;
+{   double length, width, height;
+    public:
     Box()
     {
         cout<<"Enter the length: ";
