@@ -1,5 +1,3 @@
-// Unfinished code
-
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -12,47 +10,48 @@ void merge(int arr[], int l_ind, int mid, int r_ind)
     
     int t1[n1], t2[n2];
     
+    k=l_ind;
     for(i = 0; i<n1; i++)
-        t1[i] = arr[l_ind+i];
+       { t1[i] = arr[k];
+         k++;
+       }
+    k=mid+1;
     for(j=0; j<n2; j++)
-        t2[j] = arr[mid+1+j];
+       { t2[j] = arr[k];
+         k++;
+       }
     
     i=0;
     j=0;
     k=l_ind;
     while(i<n1 && j<n2)
     {
-        if(t1[i] <= t2[j])
+        if(t1[i] < t2[j])
         {
-            arr[k] = t1[i];
-            i++;
+            arr[k++] = t1[i++];
         }
         
          else {
-            arr[k] = t2[j];
-            j++;
+            arr[k++] = t2[j++];
         }
-        k++;
+     
     }
     
     while (i < n1) {
-        arr[k] = t1[i];
-        i++;
-        k++;
+        arr[k++] = t1[i++];
     }
     
     while (j < n2) {
-        arr[k] = t2[j];
-        j++;
-        k++;
+        arr[k++] = t2[j++];
     }
+
 }
 
 void merge_sort(int arr[], int l_ind, int r_ind)
 {
     if(l_ind<r_ind)
     {
-        int mid = l_ind + (r_ind-1) / 2;
+        int mid = (l_ind + r_ind) / 2;
         merge_sort(arr, l_ind, mid);
         merge_sort(arr, mid+1, r_ind);
         merge(arr, l_ind, mid, r_ind);
@@ -61,10 +60,17 @@ void merge_sort(int arr[], int l_ind, int r_ind)
 
 int main()
 {
-    int arr[] = { 12, 11, 13, 5, 6, 7 };
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    int arr[size];
+    for(int i = 0; i<size; i++)
+    {
+        printf("E%d = ", i+1);
+        scanf("%d", &arr[i]);
+    }
     printf("\n\n");
-    
+    printf("size = %d\n", size);
     printf("Given array: \n");
     for (int i = 0; i < size; i++)
         printf("%d ", arr[i]);
@@ -76,4 +82,5 @@ int main()
     for (int i = 0; i < size; i++)
         printf("%d ", arr[i]);
     printf("\n");
+
 }
