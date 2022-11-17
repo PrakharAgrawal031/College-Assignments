@@ -11,21 +11,19 @@ class stu_data {
         System.out.println("Enter the enrollment number of student : ");
         enrollnum = sc.nextInt();
     }
+
     public void show_year() {
-        if(210000<=enrollnum && enrollnum<=211000){
-            System.out.println(name+" is in year 1");
-        }
-        else if(211000<=enrollnum && enrollnum<212000){
-            System.out.println(name+" is in year 2");
-        }
-        else if(212000<=enrollnum && enrollnum<213000){
-            System.out.println(name+" is in year 3");
-        }
-        else if(213000<=enrollnum && enrollnum<214000){
-            System.out.println(name+" is in year 4");
+        if (210000 <= enrollnum && enrollnum <= 211000) {
+            System.out.println(name + " is in year 1");
+        } else if (211000 <= enrollnum && enrollnum < 212000) {
+            System.out.println(name + " is in year 2");
+        } else if (212000 <= enrollnum && enrollnum < 213000) {
+            System.out.println(name + " is in year 3");
+        } else if (213000 <= enrollnum && enrollnum < 214000) {
+            System.out.println(name + " is in year 4");
         }
     }
-    
+
 }
 
 public class student_year {
@@ -40,9 +38,6 @@ public class student_year {
         S1.show_year();
         S2.show_year();
         S3.show_year();
-
-
-        
 
     }
 }
