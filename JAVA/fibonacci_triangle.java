@@ -1,4 +1,4 @@
-public class fibonaccipattern
+public class fibonacci_triangle
 {
 	public static void main(String[] args) {
 	 int count1 =1;

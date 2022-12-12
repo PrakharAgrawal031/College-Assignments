@@ -5,15 +5,16 @@ import java.util.Scanner;
 public class email {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter your email: ");
+        System.out.printf("Enter your email: ");
         String E1 = in.nextLine();
         in.close();
         int x = E1.indexOf('@');
         String username = new String();
-        for(int  i = 0; i<x; i++)
-        {
-            username += E1.charAt(i);
-        }
+        username = E1.substring(0, x);
+        //for(int  i = 0; i<x; i++)
+        //{
+        //    username += E1.charAt(i);
+        //}
         System.out.println("Username = " + username);
     }
 }

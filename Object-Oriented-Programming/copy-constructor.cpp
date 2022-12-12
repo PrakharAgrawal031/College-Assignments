@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 class Bank
 {
@@ -11,17 +11,17 @@ class Bank
             accnum=i;
         }
         void display(void) { 
-            cout<< "Account Number: "<<accnum<<" , Account Balance: "<<accbal<<endl;
+            cout<< "Account Number: BNK"<<accnum<<" , Account Balance: "<<accbal<<endl;
         }
         Bank (Bank &x)
         {
             accnum = x.accnum+1;
-            accbal = x.accbal;
+            accbal = x.accbal+200;
         }
 };
 int main()
 {
-    Bank p1(36654, 4000);
+    Bank p1(35466, 4000);
     Bank p2(p1);
     p1.display();
     p2.display();
