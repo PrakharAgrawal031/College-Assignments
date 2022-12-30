@@ -5,4 +5,5 @@ class Check {
     System.out.println("Equal"); 
     else 
     System.out.println("Not Equal"); 
+    
     } }
