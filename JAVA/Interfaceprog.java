@@ -12,22 +12,22 @@ public class Interfaceprog {
             this.radius = radius;
         }
     
-        @Override
+        //@Override
         public double area() {
             return Math.PI * radius * radius;
         }
     
-        @Override
+        //@Override
         public double perimeter() {
             return 2 * Math.PI * radius;
         }
     
-        @Override
+        //@Override
         public void showArea() {
             System.out.println("The area of the circle is: " + area());
         }
     
-        @Override
+        //@Override
         public void showPerimeter() {
             System.out.println("The perimeter of the circle is: " + perimeter());
         }
@@ -42,22 +42,22 @@ public class Interfaceprog {
             this.height = height;
         }
     
-        @Override
+        //@Override
         public double area() {
             return width * height;
         }
     
-        @Override
+        //@Override
         public double perimeter() {
             return 2 * (width + height);
         }
 
-        @Override
+        //@Override
         public void showArea() {
             System.out.println("The area of the rectangle is: " + area());
         }
     
-        @Override
+        //@Override
         public void showPerimeter() {
             System.out.println("The perimeter of the rectangle is: " + perimeter());
         }
