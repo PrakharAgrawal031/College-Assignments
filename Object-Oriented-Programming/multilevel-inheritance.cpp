@@ -7,7 +7,7 @@ class Vehicle
     public:
     Vehicle(){cout<<"Obj is of type Vehicle."<<endl;}
 };
-class Car: public Vehicle
+class Car: Vehicle
 {
     public:
     Car(){cout<<"This vehicle is known as car."<<endl;}
