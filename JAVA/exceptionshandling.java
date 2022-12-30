@@ -2,7 +2,7 @@ public class exceptionshandling {
         public static void main(String[] args) {
           try {
             int a = args.length;
-             System.out.println(a);
+            System.out.println(a);
             int b = 42 / a;
             System.out.println("a = " + a);
       
